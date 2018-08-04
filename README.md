@@ -75,6 +75,7 @@ BaiduMobAd - 合作方百度AdSDK
 ```
 -AdSupport.framework
 -WebKit.framework
+-MessageUI.framework
 -libstdc++ 
 -libz1.2.5
 -libsqlite3 微信SDK所需
