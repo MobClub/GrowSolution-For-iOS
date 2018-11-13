@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   #s.default_subspecs      = 'GrowSDK'
 
-  s.frameworks    = 'WebKit','AdSupport','MessageUI'
+  s.frameworks    = 'WebKit','AdSupport','MessageUI','SafariServices'
   s.dependency 'MOBFoundation'
   s.dependency 'JiMu'
   s.dependency 'mob_sharesdk'
