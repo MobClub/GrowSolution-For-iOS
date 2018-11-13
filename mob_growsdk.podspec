@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'mob_growsdk'
-  s.version               = "1.0.0"
+  s.version               = "1.2.0"
   s.summary               = 'mob.com 增长变现解决方案'
   s.license               = 'Copyright © 2012-2018 mob.com'
   s.author                = { "mob" => "mobproducts@163.com" }
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'SDK/GrowSDK/GrowSDK.framework',
                           'SDK/GrowSDK/GrowSDKUI.framework', 
+                          'SDK/GrowSDK/GrowSDKAdv.framework',
                           'SDK/Required/MSC.framework',
                           'SDK/BaiduMobAd/BaiduMobAdSDK.framework'
 

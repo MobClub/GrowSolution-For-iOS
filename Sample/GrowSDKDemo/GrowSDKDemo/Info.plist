@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.2.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -84,9 +84,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MOBAppKey</key>
-	<string>57272c816c33e</string>
+	<string>5727050f3f880</string>
 	<key>MOBAppSecret</key>
-	<string>7740ce8051e1a8dacb64645b4ebaf3a9</string>
+	<string>54dfc758141b98f9aafe2f1e5eb63b09</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -105,8 +105,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

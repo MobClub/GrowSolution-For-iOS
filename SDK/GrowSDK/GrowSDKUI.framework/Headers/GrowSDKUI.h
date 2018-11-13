@@ -15,6 +15,9 @@ typedef NS_ENUM(NSUInteger, GSDKUIControllerShowType) {
 
 @interface GrowSDKUI : NSObject
 
+ /**
+  推出视图动画类型
+  */
 @property (nonatomic) GSDKUIControllerShowType type;
 
 /**
@@ -28,8 +31,15 @@ typedef NS_ENUM(NSUInteger, GSDKUIControllerShowType) {
  展示模块
 
  @param fromController 来源控制器
- @param type 展示类型
  */
 - (void)showFrom:(UIViewController *)fromController result:(void (^)(NSError *error))result;
+
+
+/**
+ 获取主控制器
+
+ @return 主控制器
+ */
+- (UIViewController *)gsdkMainViewController:(void (^)(NSError *error))result;
 
 @end

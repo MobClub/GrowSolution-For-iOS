@@ -24,6 +24,11 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     [self.view endEditing:YES];
+    
+    //NSLog(@"self.viewControllers.count ---%ld",self.viewControllers.count);
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
     [super pushViewController:viewController animated:animated];
     
 }

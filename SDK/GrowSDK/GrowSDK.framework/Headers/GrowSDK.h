@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSDKTaskInfo.h"
 
 typedef void(^GSDKBindAccountHandler) (NSString *mobUserId, NSError *error);
+typedef void(^GSDKTaskInfoHandler) (GSDKTaskInfo *taskInfo, NSError *error);
+typedef void(^GSDKSignHandler) (NSInteger coins, NSError *error);
 
 @interface GrowSDK : NSObject
 
@@ -26,5 +29,21 @@ typedef void(^GSDKBindAccountHandler) (NSString *mobUserId, NSError *error);
              nickName:(NSString *)nickName
                avatar:(NSString *)avatar
                result:(GSDKBindAccountHandler)result;
+
+#pragma mark - 签到系统
+
+/**
+ 获取当日签到任务信息
+ 
+ @param result 回调
+ */
++ (void)getTaskInfo:(GSDKTaskInfoHandler)result;
+
+/**
+ 进行签到
+ 
+ @param result 回调
+ */
++ (void)signInToday:(GSDKSignHandler)result;
 
 @end

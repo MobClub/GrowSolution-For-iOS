@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  GrowSDKDemo
 //
-//  Created by 陈剑东 on 2018/7/11.
+//  Created by 陈剑东 on 2018/6/19.
 //  Copyright © 2018年 陈剑东. All rights reserved.
 //
 
