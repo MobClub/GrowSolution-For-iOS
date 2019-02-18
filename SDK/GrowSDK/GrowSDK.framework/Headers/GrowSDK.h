@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GSDKTaskInfo.h"
+#import "GSDKFriend.h"
 
 typedef void(^GSDKBindAccountHandler) (NSString *mobUserId, NSError *error);
 typedef void(^GSDKTaskInfoHandler) (GSDKTaskInfo *taskInfo, NSError *error);
 typedef void(^GSDKSignHandler) (NSInteger coins, NSError *error);
+typedef void(^GSDKFriendListHandler) (NSArray<GSDKFriend *> *friendList, NSError *error);
 
 @interface GrowSDK : NSObject
 
@@ -30,6 +32,7 @@ typedef void(^GSDKSignHandler) (NSInteger coins, NSError *error);
                avatar:(NSString *)avatar
                result:(GSDKBindAccountHandler)result;
 
+
 #pragma mark - 签到系统
 
 /**
@@ -45,5 +48,32 @@ typedef void(^GSDKSignHandler) (NSInteger coins, NSError *error);
  @param result 回调
  */
 + (void)signInToday:(GSDKSignHandler)result;
+
+
+#pragma mark - 好友邀请
+
+/**
+ 获取当前用户邀请码
+
+ @param result 回调
+ */
++ (void)getInviteCodeForCurrentUser:(void(^)(NSString *, NSError *))result;
+
+/**
+ 输入邀请码
+ 
+ @param referCode 邀请码
+ @param result 回调
+ */
++ (void)inputInviteCode:(NSString *)referCode result:(void(^)(NSError *))result;
+
+/**
+ 获取好友列表
+ 
+ @param pageIndex 页码 【从 0 开始】
+ @param pageSize 单页数量
+ @param result 回调结果
+ */
++ (void)getFriendList:(NSInteger)pageIndex pageSize:(NSInteger)pageSize result:(GSDKFriendListHandler)result;
 
 @end

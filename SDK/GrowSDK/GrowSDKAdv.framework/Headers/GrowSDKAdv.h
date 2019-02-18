@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GSDKAdView.h"
-#import "GSDKAdStream.h"
-#import "GSDKInstAdView.h"
+#import "GSDKAdModel.h"
 #import "GrowSDKAdvTypeDefine.h"
-
 
 @interface GrowSDKAdv : NSObject
 
@@ -21,28 +18,29 @@
  
  @param result 回调
  */
-+ (void)requestLaunchAd:(LaunchAdHandler)result;
++ (void)requestLaunchAd:(GSDKAdLaunchAdHandler)result;
 
 /**
  获取插屏广告
 
  @param result 回调
  */
-+ (void)requestInstAd:(InstAdHandler)result;
++ (void)requestInstAd:(GSDKInstAdHandler)result;
 
 /**
  获取信息流广告
 
  @param result 回调
  */
-+ (void)requestAdStream:(StreamHandler)result;
++ (void)requestAdStream:(GSDKAdStreamHandler)result;
 
 /**
- 获取广告视图 【建议广告视图比例默认宽高比为3:2】
+ 获取广告视图Banner 【建议广告视图比例默认宽高比为3:2】
  
  @param size 尺寸大小
+ @param viewController 跳转控制器
  @param result 回调
  */
-+ (void)requestAdView:(CGSize)size result:(AdViewHandler)result;
++ (void)requestBanner:(CGSize)size viewController:(UIViewController *)vc onClick:(GSDKAdClickHandler)clickHandler result:(GSDKBannerAdHandler)result;
 
 @end

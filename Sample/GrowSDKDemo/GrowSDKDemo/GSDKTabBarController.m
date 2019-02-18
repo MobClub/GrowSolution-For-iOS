@@ -23,36 +23,66 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    [GrowSDKUI defaultUI].enableTaskInfo = YES;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTabbarVC) name:@"BindingSuccess" object:nil];
     
-//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor],NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-//
-//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    NSMutableArray *vcs = @[].mutableCopy;
     
-    // 首页
-    UIViewController * naviHome = [self addChildController:[[GSDKDemoViewController alloc]init] title:@"首页" normalImage:@"home_normal" selectedImage:@"home_select"];
+    void(^dismissHandler)(UIViewController *) = ^(UIViewController *controller){
+        
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    };
     
-    [self setViewControllers: @[naviHome]];
+    GSDKBaseViewController *gsdkVC = [[GrowSDKUI defaultUI] gsdkMainViewController:nil];
+    gsdkVC.dismissHandler = dismissHandler;
+    if (gsdkVC)
+    {
+        UIViewController *naviGsdk = [self addChildController:gsdkVC title:@"图文" normalImage:@"tab1a" selectedImage:@"tab1b"];
+        [vcs addObject:naviGsdk];
+    }
+    
+    GSDKBaseViewController *videoVC = [[GrowSDKUI defaultUI] gsdkVideoInfosController:nil];
+    videoVC.dismissHandler = dismissHandler;
+    if (videoVC)
+    {
+        UIViewController *naviGsdk = [self addChildController:videoVC title:@"视频" normalImage:@"tab2a" selectedImage:@"tab2b"];
+        [vcs addObject:naviGsdk];
+    }
+    
+    GSDKBaseViewController *userVC = [[GrowSDKUI defaultUI] gsdkUserInfoController:nil];
+    userVC.dismissHandler = dismissHandler;
+    if (userVC)
+    {
+        UIViewController *naviGsdk = [self addChildController:userVC title:@"我的" normalImage:@"tab3a" selectedImage:@"tab3b"];
+        [vcs addObject:naviGsdk];
+    }
+    
+    [self setViewControllers:vcs];
     
 }
 
 //用户绑定后刷新tab
 - (void)reloadTabbarVC
 {
-    NSMutableArray *tabbarViewControllers = [self.viewControllers mutableCopy];
-    if (tabbarViewControllers.count > 1) {
-        [tabbarViewControllers removeObjectAtIndex:1];
-    }
-    
-    UIViewController * gsdkVC = [[GrowSDKUI defaultUI] gsdkMainViewController:^(NSError *error) {
-        
-    }];
-    if (gsdkVC) {
-        UIViewController *naviGsdk = [self addChildController:gsdkVC title:@"新闻" normalImage:@"account_normal" selectedImage:@"account_select"];
-        [tabbarViewControllers addObject:naviGsdk];
-        [self setViewControllers:tabbarViewControllers];
-    }
-    
+//    NSMutableArray *tabbarViewControllers = [self.viewControllers mutableCopy];
+//    if (tabbarViewControllers.count > 1) {
+//        [tabbarViewControllers removeObjectAtIndex:1];
+//    }
+//
+//    UIViewController * gsdkVC = [[GrowSDKUI defaultUI] gsdkMainViewController:^(NSError *error) {
+//
+//    }];
+//    if (gsdkVC) {
+//        UIViewController *naviGsdk = [self addChildController:gsdkVC title:@"图文" normalImage:@"tab1a" selectedImage:@"tab1b"];
+//        [tabbarViewControllers addObject:naviGsdk];
+//
+////        UIViewController *naviGsdk_1 = [self addChildController:gsdkVC title:@"test" normalImage:@"tab2a" selectedImage:@"tab2b"];
+////        [tabbarViewControllers addObject:naviGsdk_1];
+//
+//
+//        [self setViewControllers:tabbarViewControllers];
+//    }
 }
 
 #pragma mark

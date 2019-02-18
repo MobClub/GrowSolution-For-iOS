@@ -1,0 +1,6 @@
+framework module VLionADSDK {
+  umbrella header "VLionADSDK.h"
+
+  export *
+  module * { export * }
+}

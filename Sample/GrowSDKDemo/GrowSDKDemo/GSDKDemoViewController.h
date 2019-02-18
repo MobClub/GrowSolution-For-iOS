@@ -2,12 +2,16 @@
 //  GSDKDemoViewController.h
 //  GrowSDKDemo
 //
-//  Created by Brilance on 2018/7/3.
-//  Copyright © 2018年 陈剑东. All rights reserved.
+//  Created by Max on 2019/1/28.
+//  Copyright © 2019 陈剑东. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface GSDKDemoViewController : UIViewController
 
 @end
+
+NS_ASSUME_NONNULL_END
