@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
   s.name                  = 'mob_growsdk'
-  s.version               = "1.2.0"
+  s.version               = "1.3.0"
   s.summary               = 'mob.com 增长变现解决方案'
   s.license               = 'Copyright © 2012-2018 mob.com'
   s.author                = { "mob" => "mobproducts@163.com" }
 
   s.homepage              = 'http://www.mob.com'
-  s.source                = { :git => "https://github.com/MobClub/GrowSolution-For-iOS.git", :tag => s.version.to_s }
+  s.source                = { :http => 'http://dev.ios.mob.com/files/download/growsdk/v1.3.0.zip' }
   s.platform              = :ios
   s.ios.deployment_target = "8.0"
-  #s.default_subspecs      = 'GrowSDK'
+  #s.default_subspecs     = 'GrowSDK'
 
   s.frameworks    = 'WebKit','AdSupport','MessageUI','SafariServices'
   s.dependency 'MOBFoundation'
@@ -27,12 +27,13 @@ Pod::Spec.new do |s|
                           'SDK/GrowSDK/GrowSDKUI.framework', 
                           'SDK/GrowSDK/GrowSDKAdv.framework',
                           'SDK/Required/MSC.framework',
-                          'SDK/BaiduMobAd/BaiduMobAdSDK.framework'
+                          'SDK/GrowSDK/Support/Ads/BaiduLib/BaiduMobAdSDK.framework',
+                          'SDK/GrowSDK/Support/Ads/VLionADSDK/VLionADSDK.framework',
+                          'SDK/GrowSDK/Support/News/YL/YLDataSDK.framework'
 
   s.resources = 'SDK/GrowSDK/GrowSDKResource.bundle', 
                 'SDK/CMSSDK/CMSSDKUI.bundle',
-                'SDK/BaiduMobAd/baidumobadsdk.bundle'
-
-
+                'SDK/GrowSDK/Support/Ads/BaiduLib/baidumobadsdk.bundle',
+                'SDK/GrowSDK/Support/Ads/VLionADSDK/VLionAdImg.bundle'
 
 end

@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3.0</string>
+	<string>1.3.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -27,8 +27,8 @@
 			<string>qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ4202C4FA</string>
-				<string>tencent1107477754</string>
+				<string>QQ05FB8B52</string>
+				<string>tencent100371282</string>
 			</array>
 		</dict>
 		<dict>
@@ -38,7 +38,7 @@
 			<string>wechat</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxb5a0ea1959853b3f</string>
+				<string>wx4868b35061f87885</string>
 			</array>
 		</dict>
 		<dict>

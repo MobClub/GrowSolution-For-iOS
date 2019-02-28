@@ -231,6 +231,10 @@
                 GSDKAlert(@"%@",news);
             }];
         }
+        else
+        {
+            GSDKAlert(@"%@",error);
+        }
     }];
 }
 

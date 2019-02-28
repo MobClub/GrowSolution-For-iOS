@@ -105,8 +105,19 @@
 		E290AC2F20F6549800943A83 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E290AC2E20F6549800943A83 /* libsqlite3.tbd */; };
 		E290AC3120F654A200943A83 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290AC3020F654A100943A83 /* WebKit.framework */; };
 		E290AC3320F654A900943A83 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290AC3220F654A800943A83 /* AdSupport.framework */; };
+		E2E3E8C0217886C900671F65 /* GrowSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E3E8BF217886C900671F65 /* GrowSDKDemoTests.m */; };
 		E2E3E8DA2178877700671F65 /* GSDKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E3E8D82178877700671F65 /* GSDKTabBarController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2E3E8C2217886C900671F65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E290AB4820F653F800943A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E290AB4F20F653F800943A83;
+			remoteInfo = GrowSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CB819FD321F3066800D4E8A9 /* Embed Frameworks */ = {
@@ -267,6 +278,9 @@
 		E290AC3020F654A100943A83 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E290AC3220F654A800943A83 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E290AC3420F654B900943A83 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		E2E3E8BD217886C900671F65 /* GrowSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E3E8BF217886C900671F65 /* GrowSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrowSDKDemoTests.m; sourceTree = "<group>"; };
+		E2E3E8C1217886C900671F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E3E8D82178877700671F65 /* GSDKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDKTabBarController.m; sourceTree = "<group>"; };
 		E2E3E8D92178877700671F65 /* GSDKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDKTabBarController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,6 +319,13 @@
 				5094947221FFFD3800D26CF9 /* MSC.framework in Frameworks */,
 				509494A321FFFD3800D26CF9 /* SinaWeiboConnector.framework in Frameworks */,
 				5094947021FFFD3800D26CF9 /* JiMu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E3E8BA217886C900671F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				E290AB5220F653F800943A83 /* GrowSDKDemo */,
+				E2E3E8BE217886C900671F65 /* GrowSDKDemoTests */,
 				E290AB5120F653F800943A83 /* Products */,
 				E290AC2D20F6549700943A83 /* Frameworks */,
 			);
@@ -674,6 +696,7 @@
 			isa = PBXGroup;
 			children = (
 				E290AB5020F653F800943A83 /* GrowSDKDemo.app */,
+				E2E3E8BD217886C900671F65 /* GrowSDKDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -719,6 +742,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E2E3E8BE217886C900671F65 /* GrowSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3E8BF217886C900671F65 /* GrowSDKDemoTests.m */,
+				E2E3E8C1217886C900671F65 /* Info.plist */,
+			);
+			path = GrowSDKDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -739,6 +771,24 @@
 			productName = GrowSDKDemo;
 			productReference = E290AB5020F653F800943A83 /* GrowSDKDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E2E3E8BC217886C900671F65 /* GrowSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E3E8C6217886C900671F65 /* Build configuration list for PBXNativeTarget "GrowSDKDemoTests" */;
+			buildPhases = (
+				E2E3E8B9217886C900671F65 /* Sources */,
+				E2E3E8BA217886C900671F65 /* Frameworks */,
+				E2E3E8BB217886C900671F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2E3E8C3217886C900671F65 /* PBXTargetDependency */,
+			);
+			name = GrowSDKDemoTests;
+			productName = GrowSDKDemoTests;
+			productReference = E2E3E8BD217886C900671F65 /* GrowSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -761,6 +811,11 @@
 							};
 						};
 					};
+					E2E3E8BC217886C900671F65 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+						TestTargetID = E290AB4F20F653F800943A83;
+					};
 				};
 			};
 			buildConfigurationList = E290AB4B20F653F800943A83 /* Build configuration list for PBXProject "GrowSDKDemo" */;
@@ -777,6 +832,7 @@
 			projectRoot = "";
 			targets = (
 				E290AB4F20F653F800943A83 /* GrowSDKDemo */,
+				E2E3E8BC217886C900671F65 /* GrowSDKDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -819,6 +875,13 @@
 				506F8D8821F1BB170096C365 /* tab3a@2x.png in Resources */,
 				506F8D8E21F1BB170096C365 /* tab1a@2x.png in Resources */,
 				506F8D8B21F1BB170096C365 /* tab2a@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E3E8BB217886C900671F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +930,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2E3E8B9217886C900671F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E3E8C0217886C900671F65 /* GrowSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2E3E8C3217886C900671F65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E290AB4F20F653F800943A83 /* GrowSDKDemo */;
+			targetProxy = E2E3E8C2217886C900671F65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E290AB5920F653F800943A83 /* Main.storyboard */ = {
@@ -1040,6 +1119,46 @@
 			};
 			name = Release;
 		};
+		E2E3E8C4217886C900671F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LW5266U92D;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../SDK/**";
+				INFOPLIST_FILE = GrowSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../SDK/**";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = Mob.GrowSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrowSDKDemo.app/GrowSDKDemo";
+			};
+			name = Debug;
+		};
+		E2E3E8C5217886C900671F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LW5266U92D;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../SDK/**";
+				INFOPLIST_FILE = GrowSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../SDK/**";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = Mob.GrowSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrowSDKDemo.app/GrowSDKDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1057,6 +1176,15 @@
 			buildConfigurations = (
 				E290AB6720F653F800943A83 /* Debug */,
 				E290AB6820F653F800943A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E3E8C6217886C900671F65 /* Build configuration list for PBXNativeTarget "GrowSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E3E8C4217886C900671F65 /* Debug */,
+				E2E3E8C5217886C900671F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
